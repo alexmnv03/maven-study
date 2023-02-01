@@ -25,4 +25,6 @@ mvn package
 java -cp target/part-010-1.0-SNAPSHOT.jar com.alex.mavenstudy.App
 и увидим результат выполнения
 
+Тоже самое можно сделать используя IntelliJ IDEA, при этом можем выбрать готовый archetype или 
+пустой проект maven с чистым помником.
 
