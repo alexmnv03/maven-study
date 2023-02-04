@@ -112,8 +112,26 @@ ${my.version}
 <organization>
 <developers>
 
+# maven repository
+По умолчанию maven скачивает все библиотеки со своего репозитория, который прописан в файле 
+супер-pom в секции 
+<repositorys>
+
 # dependencies
-Что бы использовать сторонние библиотеки, то необходимо описать их в секции dependencies  
+Что бы использовать сторонние библиотеки, то необходимо описать их в секции dependencies
+Подключаем библиотеки по трем параметрам, которые мы рассмотрели выше
+<dependencies>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.11</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+
+Все библиотеки сохраняются в папке .m2
+
+
 
 
 
