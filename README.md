@@ -218,3 +218,23 @@ mvn exec:java -Dexec.mainClass:com.namePackage.nameClassMain
 com.namePackage - полное имя пакета, если в классе указан пакет 
 nameClassMain - имя класса с модулем main
 
+# profile
+
+Используются для использования разных параметров в зависимости от указанного profile при звпуске
+
+<profiles>
+    <profile>
+        <id>dev</id>
+        <buld>...</buld>
+    </profile>
+    <profile>
+        <id>prod</id>
+        <buld>...</buld>
+    </profile>
+</profiles>
+
+Выбор profile осуществляется следующим образом:
+mvn clean package -Pdev
+
+ActiveByDefault - делает этот профайл активнм по умолчанию
+
