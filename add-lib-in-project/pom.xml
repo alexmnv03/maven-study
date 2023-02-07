@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.alex.maven</groupId>
+	<artifactId>add-lib-in-project</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>add-lib-in-project</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>17</java.version>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>				
+		<maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
+		<lombok.version>1.18.22</lombok.version>
+		<common-lang.version>0.0.1</common-lang.version>
+	</properties>
+	<dependencies>
+		<dependency>
+    		<groupId>com.alex.mylib</groupId>
+    		<artifactId>mylang</artifactId>
+    		<version>${common-lang.version}</version>
+		</dependency>
+	</dependencies>
+
+    <build>
+		<finalName>part-01</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>		
+        <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>${maven-assembly-plugin.version}</version>
+    			<executions>
+        			<execution>
+						<id>producer</id>
+            			<phase>package</phase>
+            			<goals>
+                			<goal>single</goal>
+            			</goals>
+            			<configuration>
+                			<archive>
+                				<manifest>
+                    				<mainClass>
+                        				com.alex.maven.addlibinproject.AddLibInProjectApplication
+                    				</mainClass>
+                				</manifest>
+                			</archive>
+                			<descriptorRefs>
+                    			<descriptorRef>jar-with-dependencies</descriptorRef>
+                			</descriptorRefs>
+							<finalName>${project.artifactId}-producer</finalName>
+            			</configuration>
+        			</execution>
+    			</executions>
+			</plugin>
+        </plugins>
+    </build>
+
+</project>
