@@ -1,0 +1,2 @@
+Main-Class: com.alex.mavenstudy.part090.Part090Application
+
