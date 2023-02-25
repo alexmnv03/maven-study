@@ -1,0 +1,1 @@
+Main-Class: com.alex.mavenstudy.part100.Part100Application
