@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.alex.mylib</groupId>
+	<artifactId>mylang</artifactId>
+	<version>0.0.1</version>
+	<name>mylang</name>
+	<description>Demo project mylang</description>
+	<properties>
+		<java.version>17</java.version>
+		<lombok.version>1.18.22</lombok.version>
+		<slf4j.version>2.0.1</slf4j.version>
+		<maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>	
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>					
+	</properties>
+	<dependencies>
+
+	</dependencies>
+
+    <build>
+		<finalName>my-lang</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+        <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>${maven-assembly-plugin.version}</version>
+    			<executions>
+        			<execution>
+						<id>producer</id>
+            			<phase>package</phase>
+            			<goals>
+                			<goal>single</goal>
+            			</goals>
+            			<configuration>
+                			<archive>
+                				<manifest>
+                    				<mainClass>
+                        				com.alex.mylib.mylang.MylangApplication
+                    				</mainClass>
+                				</manifest>
+                			</archive>
+                			<descriptorRefs>
+                    			<descriptorRef>jar-with-dependencies</descriptorRef>
+                			</descriptorRefs>
+							<!-- <finalName>${project.artifactId}-producer</finalName> -->
+            			</configuration>
+        			</execution>
+    			</executions>
+			</plugin>
+        </plugins>
+    </build>
+
+</project>
