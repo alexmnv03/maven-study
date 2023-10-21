@@ -20,4 +20,3 @@
 13. [Создаем собственный плагин](https://github.com/alexmnv03/maven-study/tree/develop/hello-plugin)
 14. [В этом модуле](https://github.com/alexmnv03/maven-study/tree/develop/used-plugin) попробуем  
    воспользоваться нашим собственным плагином
-
