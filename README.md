@@ -5,6 +5,7 @@
 
 Содержание курса
 
+1. [Общая информация по работе с maven](https://github.com/alexmnv03/maven-study/blob/main/common/General-Info-maven.md)
 1. [Как добавить jar файл в локальный репозиторий maven](https://github.com/alexmnv03/maven-study/tree/add-lib-in-project)
 2. [Cгенерируем проект с помощью maven](https://github.com/alexmnv03/maven-study/tree/edit_info/part-010)
 3. [Привязка плагина к одной из фаз](https://github.com/alexmnv03/maven-study/tree/edit_info/part-020)
